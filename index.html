@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pong</title>
+	<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+	<style type="text/css">
+		canvas{
+			height: 100%;
+			width: 100%;
+		}
+
+		html,body{
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+		}
+	</style>
+	<script type="text/javascript" src="paper-full.min.js"></script>
+	<script type="text/paperscript" canvas="game">
+	// Create a centered text item at the center of the view:
+	var raster = new Raster("beetle.png");
+	raster.scale(0.4);
+
+	// Define a random point in the view, which we will be moving
+	// the raster item towards.
+	var destination = Point.random() * view.size;
+
+	function onFrame(event) {
+		// Each frame, move the path 1/30th of the difference in position
+		// between it and the destination.
+		
+		// The vector is the difference between the position of
+		// the raster item and the destination point:
+		var vector = destination - raster.position;
+		
+		// We add 1/30th of the vector to the position property
+		// of the raster item, to move it in the direction of the
+		// destination point:
+		raster.position += vector / 15;
+
+		// If the distance between the path and the destination is less
+		// than 5, we define a new random point in the view to move the
+		// path to:
+		if (vector.length < 5) {
+			destination = Point.random() * view.size;
+		}
+	}
+	</script>
+</head>
+<body>
+<canvas id="game" resize></canvas>
+</body>
+</html>
