@@ -42,7 +42,10 @@
 		// If the distance between the path and the destination is less
 		// than 5, we define a new random point in the view to move the
 		// path to:
-		if (vector.length < 5) {
+	}
+
+	function onMouseMove(event){
+		if (raster.position.getDistance(event.point) < 100) {
 			destination = Point.random() * view.size;
 		}
 	}
