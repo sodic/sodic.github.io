@@ -1,0 +1,71 @@
+body {
+    background: #222; 
+}
+
+.spinner {
+    width: 150px;
+    height: 150px;
+    animation-name: expand;
+}
+
+.spinner, .spinner div {
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+.spinner div {
+    position: absolute;
+    border: 13px solid white;
+    border-radius: 50%;
+}
+
+.spinner .ring-a {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    animation-name: spin-right; 
+}
+
+.spinner .ring-b {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    animation-name: spin-left; 
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin-right {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-left {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg); 
+    }
+}
+

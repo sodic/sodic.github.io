@@ -1,0 +1,108 @@
+.gears {
+    width: 150px;
+    height: 150px;
+    animation-name: scale;
+}
+
+.gears, .gears div {
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.gears div {
+    position: absolute;
+}
+
+.fulcrum, .point {
+    border-radius: 50%;
+}
+
+.fulcrum {
+    background: #222;
+    border: 35px solid white;
+    z-index: 1;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+}
+
+.point {
+    background: white;
+    border: 1px solid white;
+    z-index: 2;
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+}
+
+.shaft {
+    background: white;
+    top: 0px;
+    bottom: 0px;
+    left: 60px;
+    right: 60px;
+}
+
+.shaft-1 {
+    animation-name: spin-1;
+}
+
+.shaft-2 {
+    animation-name: spin-2;
+}
+
+.shaft-3 {
+    animation-name: spin-3;
+}
+
+.shaft-4 {
+    animation-name: spin-4;
+}
+
+@keyframes spin-1 {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes spin-2 {
+    0% {
+        transform: rotate(45deg); 
+    }
+    100% {
+        transform: rotate(405deg); 
+    }
+}
+
+@keyframes spin-3 {
+    0% {
+        transform: rotate(90deg); 
+    }
+    100% {
+        transform: rotate(450deg); 
+    }
+}
+
+@keyframes spin-4 {
+    0% {
+        transform: rotate(135deg); 
+    }
+    100% {
+        transform: rotate(495deg); 
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
