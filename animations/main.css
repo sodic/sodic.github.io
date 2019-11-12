@@ -1,0 +1,17 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.animations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
