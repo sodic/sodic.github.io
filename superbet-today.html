@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naivcino</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background: #000;
+        }
+    </style>
+    <!-- The snippet shown here will automatically update to the
+     newest release that has a major version of 2. A minor
+     version can be specified by including it in the url. -->
+    <script crossorigin="anonymous" src="https://unpkg.com/launchdarkly-js-client-sdk@2"></script>
+    <script>
+        function redirectToMaintenance() {
+            window.location.replace('http://local.superbet.ro:8080');
+        }
+
+        function handleMaintenance(isInMaintenance) {
+            console.log('maintenance', isInMaintenance);
+            if (!isInMaintenance) {
+                redirectToMaintenance();
+            }
+        }
+
+        const user = {
+            anonymous: true,
+        };
+
+        const ldclient = LDClient.initialize('5fc6004d114d4d09881adfba', user);
+        const maintenanceFlag = 'global.maintenance-mode';
+
+        ldclient.on('ready', function () {
+            handleMaintenance(ldclient.variation(maintenanceFlag));
+            ldclient.on(`change:${maintenanceFlag}`, handleMaintenance);
+        });
+
+    </script>
+</head>
+<body>
+    <img style="display: block; margin: auto" src="circle.jpg" alt="tu bi slika trebala bit">
+</body>
+</html>
