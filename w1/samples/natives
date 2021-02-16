@@ -1,0 +1,45 @@
+// This sample provides alternative implementations of several builtin functions ('map', 'filter',
+// 'reduce') and shows how to use them:
+
+func myMap(f, array) =
+    [] if isEmpty(array) else
+    let first = head(array) |> f;
+        rest = tail(array) |> myMap(f);
+    in [first, *rest]
+
+func myFilter(p, array) =
+    [] if isEmpty(array) else
+    let current = head(array);
+        others = tail(array) |> myFilter(p);
+    in [current, *others] if p(current) else
+        others
+
+func myReduce(f, acc, array) =
+    acc if isEmpty(array) else
+    myReduce(f, f(acc, head(array)), tail(array))
+
+func myReduce0(f, array) =
+    myReduce(f, head(array), tail(array))
+
+func step(thresh, x) = 0 if x < thresh else 1
+func min(x, y) = x if x < y else y
+
+numbers = [1.2, 2.5, 3.4, 4.3, 2.1, 1.8, 4.7]
+
+// Let's compare builtins to user-defined alternatives
+sum = reduce(`+`, 0, numbers)
+mySum = myReduce(`+`, 0, numbers)
+isSumOk = mySum == sum
+
+product = reduce0(`*`, numbers)
+myProduct = myReduce0(`*`, numbers)
+isProductOk = product == myProduct
+
+lowestGreaterThan3 = numbers
+    |> myFilter(`> 3`)
+    |> myReduce0(min)
+
+// This should be "0111001"
+digitalSignal = numbers
+    |> myMap(step(2.5))
+    |> join("")
