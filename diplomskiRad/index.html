@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: black;
+        color: white;
+    }
+
+    h1 {
+        font-size: 5vh;
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    img {
+        height: 50vh;
+        animation: float 0.4s ease-in-out infinite;
+    }
+
+    main {
+        text-align: center;
+        margin: auto;
+    }
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-8vh);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+</style>
+<body>
+    <main>
+        <img src="horvat.jpg" alt="slika" />
+        <h1>Popušio si ga kume</h1>
+    </main>
+    <script>
+        function randomColor() {
+            let color = "rgb(";
+            let negative = "rgb(";
+            for (let i = 0; i <= 2; i++) {
+                const base = Math.floor(Math.random() * 256);
+                color += base; 
+                negative += 256 - base;
+                color += (i === 2 ? ")" : ", ");
+                negative += (i === 2 ? ")" : ", ");
+            }
+            return [color, negative];
+        }
+
+        setInterval(function() {
+            const [col, neg] = randomColor()
+            document.body.style.backgroundColor = col;
+            document.body.style.color = neg;
+        }, 400);
+
+        setTimeout(() => {
+            window.location.replace('http://hercegovac.com');
+        }, 2000);
+
+    </script>
+</body>
+</html>
