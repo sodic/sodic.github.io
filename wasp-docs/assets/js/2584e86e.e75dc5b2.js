@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[1658],{95673:e=>{e.exports=JSON.parse('{"permalink":"/wasp-docs/blog/tags/react","page":1,"postsPerPage":7,"totalPages":1,"totalCount":7,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

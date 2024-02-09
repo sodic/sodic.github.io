@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[1270],{82119:e=>{e.exports=JSON.parse('{"permalink":"/wasp-docs/blog/tags/saas","page":1,"postsPerPage":2,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

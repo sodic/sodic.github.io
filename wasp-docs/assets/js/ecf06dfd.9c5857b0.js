@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[8698],{12873:e=>{e.exports=JSON.parse('{"permalink":"/wasp-docs/blog/tags/language","page":1,"postsPerPage":5,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

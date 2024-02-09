@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[1471],{89125:a=>{a.exports=JSON.parse('{"label":"function calling","permalink":"/wasp-docs/blog/tags/function-calling","allTagsPath":"/wasp-docs/blog/tags","count":1}')}}]);

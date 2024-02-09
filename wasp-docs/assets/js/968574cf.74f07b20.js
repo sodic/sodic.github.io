@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[6950],{59269:e=>{e.exports=JSON.parse('{"permalink":"/wasp-docs/blog/tags/startups","page":1,"postsPerPage":15,"totalPages":1,"totalCount":15,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

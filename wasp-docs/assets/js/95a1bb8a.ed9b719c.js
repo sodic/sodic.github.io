@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[2856],{28537:a=>{a.exports=JSON.parse('{"label":"langchain","permalink":"/wasp-docs/blog/tags/langchain","allTagsPath":"/wasp-docs/blog/tags","count":2}')}}]);

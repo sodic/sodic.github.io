@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[3037],{66234:e=>{e.exports=JSON.parse('{"permalink":"/wasp-docs/blog/tags/indie-hacker","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

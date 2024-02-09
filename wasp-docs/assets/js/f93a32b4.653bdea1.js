@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[6298],{77499:e=>{e.exports=JSON.parse('{"label":"real-time","permalink":"/wasp-docs/blog/tags/real-time","allTagsPath":"/wasp-docs/blog/tags","count":1}')}}]);

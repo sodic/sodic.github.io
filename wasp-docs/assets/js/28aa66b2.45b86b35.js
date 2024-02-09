@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[5131],{63621:e=>{e.exports=JSON.parse('{"permalink":"/wasp-docs/blog/tags/launch-week","page":1,"postsPerPage":5,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[8697],{15048:e=>{e.exports=JSON.parse('{"permalink":"/wasp-docs/blog/tags/new-hire","page":1,"postsPerPage":2,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

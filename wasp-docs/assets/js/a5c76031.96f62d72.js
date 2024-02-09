@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[2274],{80194:s=>{s.exports=JSON.parse('{"label":"wsl","permalink":"/wasp-docs/blog/tags/wsl","allTagsPath":"/wasp-docs/blog/tags","count":1}')}}]);

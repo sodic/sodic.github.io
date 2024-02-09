@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[19],{59776:s=>{s.exports=JSON.parse('{"label":"gitpod","permalink":"/wasp-docs/blog/tags/gitpod","allTagsPath":"/wasp-docs/blog/tags","count":1}')}}]);
